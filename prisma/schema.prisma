@@ -9,11 +9,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
+model NewManga {
   id         String   @id @default(cuid())
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
-  title      String
-  published  Boolean
-  desc       String?
+  slug       String
 }
